@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+*::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px; }
+
+.flex-container {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .flex-container .header-content {
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 50px; }
+    .flex-container .header-content--header {
+      color: #4c4e61;
+      font-weight: 200;
+      font-size: 2.2em; }
+    .flex-container .header-content--subheader {
+      color: #4c4e61;
+      font-weight: 600;
+      font-size: 2.2em;
+      margin-bottom: 15px; }
+    .flex-container .header-content--text {
+      color: #a3a5ae; }
+
+.grid-container {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px; }
+  .grid-container .card {
+    padding: 35px 40px 20px 30px;
+    height: 250px;
+    border-radius: 6px;
+    box-shadow: 0px 17px 23px -5px rgba(0, 0, 0, 0.1);
+    position: relative; }
+    .grid-container .card--teambuilder {
+      position: relative;
+      margin-bottom: 25px;
+      overflow: hidden; }
+      .grid-container .card--teambuilder::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #ea5353;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .grid-container .card--karma {
+      position: relative;
+      margin-bottom: 25px;
+      overflow: hidden; }
+      .grid-container .card--karma::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #fcaf4a;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .grid-container .card--supervisor {
+      position: relative;
+      margin-bottom: 25px;
+      overflow: hidden; }
+      .grid-container .card--supervisor::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #45d3d3;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .grid-container .card--calculator {
+      position: relative;
+      margin-bottom: 25px;
+      overflow: hidden; }
+      .grid-container .card--calculator::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #549ef2;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .grid-container .card--image {
+      position: absolute;
+      right: 30px;
+      bottom: 30px; }
+    .grid-container .card--header {
+      margin-bottom: 10px;
+      color: #4c4e61; }
+    .grid-container .card--text {
+      font-size: 12px;
+      color: #a3a5ae; }
+  .grid-container .card--supervisor {
+    align-self: center; }
+  .grid-container .card--calculator {
+    align-self: center; }
+
+@media only screen and (max-width: 1023px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    width: 85%;
+    min-width: 250px; }
+  .flex-container {
+    height: 1500px; }
+    .flex-container .header-content {
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 50px; }
+      .flex-container .header-content--header {
+        color: #4c4e61;
+        font-weight: 200;
+        font-size: 1.6em; }
+      .flex-container .header-content--subheader {
+        color: #4c4e61;
+        font-weight: 600;
+        font-size: 1.6em;
+        margin-bottom: 15px; }
+      .flex-container .header-content--text {
+        margin: 0 auto;
+        width: 85%;
+        color: #a3a5ae; } }

@@ -1,0 +1,208 @@
+// Colors
+
+// Primary
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+
+// Neutral
+$darkblue: hsl(234, 12%, 34%);
+$grayishblue: hsl(229, 6%, 66%);
+$faintgray: hsl(0, 0%, 98%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.flex-container {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header-content {
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 50px;
+
+        &--header {
+            color: $darkblue;
+            font-weight: 200;
+            font-size: 2.2em;
+        }
+
+        &--subheader {
+            color: $darkblue;
+            font-weight: 600;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        &--text {
+            color: $grayishblue;
+        }
+    }
+}
+
+
+
+.grid-container {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+
+    .card {
+        padding: 35px 40px 20px 30px;
+        height: 250px;
+        border-radius: 6px;
+        box-shadow: 0px 17px 23px -5px rgba(0,0,0,0.1);
+        position: relative;
+
+        &--teambuilder {
+            position: relative;
+            margin-bottom: 25px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: $red;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--karma {
+            position: relative;
+            margin-bottom: 25px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: $orange;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--supervisor {
+            position: relative;
+            margin-bottom: 25px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: $cyan;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--calculator {
+            position: relative;
+            margin-bottom: 25px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 4px;
+                background-color: $blue;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &--image {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+        }
+
+
+        &--header{
+            margin-bottom: 10px;
+            color: $darkblue;
+        }
+
+        &--text {
+            font-size: 12px;
+            color: $grayishblue;
+        }
+    }
+
+    .card--supervisor {
+        align-self: center;
+    }
+
+    .card--calculator {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 85%;
+        min-width: 250px;
+    }
+
+    .flex-container {
+        height: 1500px;
+
+        .header-content {
+        max-width: 500px;
+        text-align: center;
+        margin-bottom: 50px;
+
+        &--header {
+            color: $darkblue;
+            font-weight: 200;
+            font-size: 1.6em;
+        }
+
+        &--subheader {
+            color: $darkblue;
+            font-weight: 600;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        &--text {
+            margin: 0 auto;
+            width: 85%;
+            color: $grayishblue;
+        }
+    }
+    }
+
+    
+
+}
